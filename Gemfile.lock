@@ -3,6 +3,7 @@ GEM
   specs:
     haml (4.0.5)
       tilt
+    minitest (5.8.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -17,4 +18,5 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  minitest
   sinatra

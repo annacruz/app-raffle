@@ -1,7 +1,6 @@
 class Extractor
 
-  def extract_names(file)
-    file  = "participantes.csv"
+  def get_names(file)
     names = []
     File.readlines(file).drop(2).each do |line|
         names.push(line.split(";")[0])

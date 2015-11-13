@@ -13,16 +13,12 @@ get '/' do
 end
 
 post '/raffle' do
-    tempfile = params['contestants'][:tempfile]
-    filename = params['contestants'][:filename]
-    extractor = Extractor.new()
-    session["names"] = extractor.get_names(tempfile)
+    # byebug
+    if session["names"].nil? or session["names"].empty?
+      session["names"] = Extractor.get_names(params['contestants'][:tempfile])
+    else
+      @drawn = Raffle.do_raffle!(session["names"])
+      puts @drawn
+    end
     haml :raffle
-end
-
-post '/raffled' do
-  raffle = Raffle.new()
-  names = session["names"]
-  @drawn = raffle.do_raffle!(names)
-  haml :raffled
 end

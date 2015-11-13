@@ -1,5 +1,6 @@
 %html
   %body
     %h1 Let's Raffle the names
-    %form(method="post" action="/raffled")
+    %form(method="post" action="/raffle")
       %input(type='submit' value='Do it!')
+    %h1= @drawn

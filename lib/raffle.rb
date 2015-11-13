@@ -1,8 +1,5 @@
 class Raffle
 
-  def initialize (names)
-  end
-
   def self.do_raffle!(names)
     random_index = generate_random_number(names.size - 1)
     puts "Random_index = #{random_index}"

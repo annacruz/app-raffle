@@ -1,7 +1,14 @@
-%h1.content-head.is-center Vamos ao sorteio!!!
+%h1.is-center Vamos ao sorteio ~/o/
 %form(method="post" action="/raffle")
-  #content-spash.splash
+  .splash
     %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
     %br
     %br
-    %h1.content-subhead= @drawn
+    %h1.content-subhead.drawn= @drawn
+    %br
+    %br
+    .adjust-align
+      %h2.content-subhead Quem já foi sorteado:
+      - @@drawned.each do |item|
+        %li
+          = item

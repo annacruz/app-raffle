@@ -13,6 +13,27 @@
  font-size: 125%;
 }
 
-.content-subhead {
+.drawn {
   color: #ed4545;
+}
+
+.adjust-align {
+  text-align: left;
+}
+
+.raffle {
+  background-color: #ed4545;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  height: 100px;
+}
+
+.raffle-head{
+  color: white;
+  text-shadow: -0.1rem 0.15rem 0.3rem #000
+}
+
+.body-adjust {
+  padding-left: 10px;
 }

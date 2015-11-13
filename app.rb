@@ -7,18 +7,17 @@ require_relative './lib/extractor'
 require_relative './lib/raffle'
 
 enable :sessions
-
+@@drawned = []
 get '/' do
   haml :index
 end
 
 post '/raffle' do
-    # byebug
     if session["names"].nil? or session["names"].empty?
       session["names"] = Extractor.get_names(params['contestants'][:tempfile])
     else
       @drawn = Raffle.do_raffle!(session["names"])
-      puts @drawn
+      @@drawned.push(@drawn)
     end
     haml :raffle
 end

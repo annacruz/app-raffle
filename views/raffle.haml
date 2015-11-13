@@ -1,6 +1,7 @@
-%html
-  %body
-    %h1 Let's Raffle the names
-    %form(method="post" action="/raffle")
-      %input(type='submit' value='Do it!')
-    %h1= @drawn
+%h1.content-head.is-center Vamos ao sorteio!!!
+%form(method="post" action="/raffle")
+  #content-spash.splash
+    %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
+    %br
+    %br
+    %h1.content-subhead= @drawn

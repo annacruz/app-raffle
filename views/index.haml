@@ -1,7 +1,5 @@
-%html
-  %body
-    %h1 File uploader!
-    %form(method="post" enctype='multipart/form-data' action="/raffle")
-      %input(type='file' name='contestants')
-      %br
-      %input(type='submit' value='Upload!')
+%h1 Upload do arquivo das participantes
+%form(method="post" enctype='multipart/form-data' action="/raffle")
+  %input(type='file' name='contestants')
+  %br
+  %input.button-success.pure-button(type='submit' value='Sobe!')

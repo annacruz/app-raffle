@@ -1,0 +1,18 @@
+.button-success,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+  background: rgb(28, 184, 65);
+}
+
+.button-xlarge {
+ font-size: 125%;
+}
+
+.content-subhead {
+  color: #ed4545;
+}

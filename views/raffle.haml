@@ -1,14 +1,9 @@
 %h1.is-center Vamos ao sorteio ~/o/
 %form(method="post" action="/raffle")
-  .splash
-    %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
-    %br
-    %br
-    %h1.content-subhead.drawn= @drawn
-    %br
-    %br
-    .adjust-align
-      %h2.content-subhead Quem já foi sorteado:
-      - @@drawned.each do |item|
-        %li
-          = item
+  %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
+  %h1.content-subhead.drawn.highlight= @drawn
+  %h2.content-subhead Quem já foi sorteado:
+  %ol.winners
+    - @@drawned.each do |item|
+      %li
+        = item

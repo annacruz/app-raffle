@@ -22,18 +22,21 @@
 }
 
 .raffle {
-  background-color: #ed4545;
-  text-transform: uppercase;
+  background-color: rgba(244, 153, 184, 0.30);
+  font-family: Lobster, sans-serif;
   text-align: center;
-  font-weight: bold;
-  height: 100px;
+  font-size: 2rem;
 }
 
 .raffle-head{
-  color: white;
+  color: #a7221e;
   text-shadow: -0.1rem 0.15rem 0.3rem #000
 }
 
 .body-adjust {
   padding-left: 10px;
+}
+
+#content {
+  font-family: Lato, sans-serif;
 }

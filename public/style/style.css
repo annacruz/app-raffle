@@ -1,3 +1,22 @@
+/* COMMON */
+
+.raffle {
+  background-color: rgba(244, 153, 184, 0.30);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.highlight {
+  font-family: Lobster, sans-serif;
+  color: #e22c26;
+  text-shadow: -0.1rem 0.1rem 0.2rem #420604;
+}
+
+#content {
+  font-family: Lato, sans-serif;
+  padding: 0.5rem;
+}
+
 .button-success,
 .button-secondary {
   color: white;
@@ -13,30 +32,49 @@
  font-size: 125%;
 }
 
-.drawn {
-  color: #ed4545;
-}
-
-.adjust-align {
-  text-align: left;
-}
-
-.raffle {
-  background-color: rgba(244, 153, 184, 0.30);
-  font-family: Lobster, sans-serif;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.raffle-head{
-  color: #a7221e;
-  text-shadow: -0.1rem 0.15rem 0.3rem #000
-}
-
 .body-adjust {
   padding-left: 10px;
 }
 
-#content {
-  font-family: Lato, sans-serif;
+/* INDEX */
+
+@media only screen and (max-width: 320px) {
+  input[name="contestants"] {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+  }
+}
+
+/* RAFFLE */
+
+.drawn {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.winners {
+  counter-reset: winners-count;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.winners li::before {
+  content: counter(winners-count) ". ";
+  counter-increment: winners-count;
+  color: #000;
+  display: inline-block;
+  text-align: right;
+  width: 2rem;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .drawn {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }

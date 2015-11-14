@@ -2,11 +2,7 @@
 %form(method="post" action="/raffle")
   .splash
     %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
-    %br
-    %br
     %h1.content-subhead.drawn= @drawn
-    %br
-    %br
     .adjust-align
       %h2.content-subhead Quem já foi sorteado:
       - @@drawned.each do |item|

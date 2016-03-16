@@ -1,9 +1,9 @@
 %h1.is-center Vamos ao sorteio ~/o/
 %form(method="post" action="/raffle")
   %input.button-success.pure-button.button-xlarge(type='submit' value='Vai!')
-  %h1.content-subhead.drawn.highlight= @drawn
+  %h1.content-subhead.drawn.highlight= session["drawn"]
   %h2.content-subhead Quem já foi sorteado:
   %ol.winners
-    - @@drawned.each do |item|
+    - session["drawned"].each do |item|
       %li
         = item

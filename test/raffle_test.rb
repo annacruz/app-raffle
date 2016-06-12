@@ -6,7 +6,7 @@ describe Raffle do
     @samples = ['John', 'Jane', 'Mark', 'Steave']
   end
 
-  let(:raffle) { Raffle.new() }
+  let(:raffle) { Raffle }
 
   it 'should raffle and get an array item' do
     raffle.do_raffle!(@samples).must_be_instance_of String

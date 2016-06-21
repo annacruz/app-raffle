@@ -18,7 +18,9 @@ post '/raffle' do
       session["names"] = Extractor.get_names(params['contestants'][:tempfile])
     else
       session["drawn"] = Raffle.do_raffle!(session["names"])
-      session["drawned"].push(session["drawn"])
+      if session["drawn"] != "Empty list"
+        session["drawned"].push(session["drawn"])
+      end
     end
     haml :raffle
 end

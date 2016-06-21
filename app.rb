@@ -9,13 +9,12 @@ require_relative './lib/raffle'
 enable :sessions
 get '/' do
   session.clear
-  # @@drawned = []
   session["drawned"] = []
   haml :index
 end
 
 post '/raffle' do
-    if session["names"].nil? or session["names"].empty?
+    if session["names"].nil?
       session["names"] = Extractor.get_names(params['contestants'][:tempfile])
     else
       session["drawn"] = Raffle.do_raffle!(session["names"])

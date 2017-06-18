@@ -8,4 +8,5 @@ group :development do
   gem 'minitest'
   gem 'byebug'
   gem 'foreman'
+  gem 'simplecov', :require => false, :group => :test
 end

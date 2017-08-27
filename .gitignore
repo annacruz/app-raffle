@@ -1,3 +1,4 @@
 *.csv
 .byebug_history
 coverage
+.DS_Store/

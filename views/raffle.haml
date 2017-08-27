@@ -7,3 +7,7 @@
     - session["drawned"].each do |item|
       %li
         = item
+  %input{type:'hidden', value: session['names'], id: 'raffle-participants'}
+  %script{type: 'text/javascript',
+        src: 'js/index.js'}
+
